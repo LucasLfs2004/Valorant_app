@@ -1,3 +1,11 @@
+:root {
+  --color-bege: #FFFBF5;
+  --color-vinho: #53212B;
+  --color-vinho-claro: #BD3944;
+  --color-cabernet: #FD4556;
+  --preto: #000;
+}
+
 .App {
   text-align: center;
 }
