@@ -1,3 +1,10 @@
+# App Valorant
+
+Bem vindo à aplicação web sobre o jogo Valorant, com o foco em ser um projeto de construção de uma wiki sobre o game, com dados dos personagens, mapas e armas, consumindo a API [Valorant API](https://valorant-api.com/).
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
