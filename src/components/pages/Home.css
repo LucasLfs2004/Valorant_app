@@ -1,0 +1,30 @@
+:root {
+    --color-1: #90e3fdff;
+    --color-2: #557f8cff;
+    --color-3: #2b4e7cff;
+    --color-4: #1e3344ff;
+}
+
+.poster {
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+
+.poster img {
+    margin: 0;
+    width: 900px !important;
+}
+
+.image {
+    position: absolute;
+    z-index: 1;
+}
+
+.background {
+    background-color: var(--color-1);
+    z-index: -1;
+    position: relative;
+}

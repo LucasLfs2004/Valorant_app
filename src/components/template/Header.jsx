@@ -1,6 +1,6 @@
 import './Header.css'
 import React from 'react'
-import iconValorant from '../../assets/icons8-valorant-48.png'
+import iconValorant from '../../assets/img/icons8-valorant-48.png'
 
 export default props => (
     <header id="header">

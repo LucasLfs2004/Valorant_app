@@ -1,4 +1,19 @@
 #footer {
-    position: absolute;
+    background-color: black;
+    color: var(--color-bege);
+    font-weight: bold;
+    position: relative;
     bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding: 10px;
+    font-size: 0.8rem;
+}
+
+.icons img{
+    margin: 0 20px;
+    width: 32px !important;
 }
