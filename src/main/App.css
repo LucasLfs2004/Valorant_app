@@ -1,4 +1,10 @@
+@font-face {
+  font-family: Valorant-font;
+  src: url('../assets/fonts/Valorant\ Font.ttf');
+}
+
 :root {
+  font-family: Valorant-font;
   --color-bege: #FFFBF5;
   --color-vinho: #53212B;
   --color-vinho-claro: #BD3944;

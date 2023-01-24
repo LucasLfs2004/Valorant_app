@@ -1,4 +1,5 @@
 #header {
+    font-family: Valorant-font;
     height: 70px;
     background-color: var(--color-bege);
     color: var(--color-cabernet);
@@ -18,6 +19,7 @@
 }
 
 .efeito {
+    font-family: Valorant-font;
     border: none;
     background-color: var(--color-cabernet);
     color: var(--color-bege);
