@@ -2,6 +2,7 @@ import './Agents.css';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import CardAgent from '../template/CardAgent';
 
 const Agents = () => {
     const [agents, setAgents] = useState([]);
@@ -12,31 +13,33 @@ const Agents = () => {
 
     const getAgents = async () => {
         try {
-            const query = await axios.get('https://valorant-api.com/v1/agents')
+            const query = await axios.get('https://valorant-api.com/v1/agents');
 
             if (query.status < 300) {
-                setAgents(query.data)
+                setAgents(query.data);
             }
         }
         catch (err) {
-            console.log(err)
+            console.log(err);
         }
     }
 
 
     return (
-        <div className="agents">Agentes
-            <div>
+        <div className="agents">
+            <h1>Operadores</h1>
+            <div className='cards'>
                 {
                     agents?.data?.length &&
                     agents.data.map(
                         (item, key) => (
-                            <div className='cardAgent' key={key}>
-                                <img className='image' src={item.fullPortrait} alt="" />
-                                <img className='bg-image' src={item.background} alt="" />
-                                <p>{item.displayName}</p>
-                                <p>{item.role?.displayName}</p>
-                            </div>
+                            <CardAgent key={key}
+                            image={item.fullPortrait}
+                            bg_image={item.background}
+                            name={item.displayName}
+                            type={item.role?.displayName}
+                            background_color1={item.backgroundGradientColors}>
+                            </CardAgent>
                         )
                     )
                 }

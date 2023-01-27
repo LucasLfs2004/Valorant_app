@@ -1,0 +1,22 @@
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.maps a {
+    text-decoration: none;
+    color: var(--color-vinho);
+}
+
+.card-map {
+    border: 1px solid grey;
+    padding: 2px;
+    margin: 20px;
+}
+
+.card-map img {
+    width: 550px;
+}
+
