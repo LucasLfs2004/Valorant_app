@@ -1,5 +1,6 @@
 import './Home.css'
 import React from 'react';
+import Footer from '../template/Footer';
 
 const Home = props => (
     <div className="home">

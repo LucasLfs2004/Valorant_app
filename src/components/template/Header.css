@@ -10,6 +10,10 @@
     margin: 0;
 }
 
+#header a h1 {
+    margin: 15px;
+}
+
 #header a {
     text-decoration: none;
 }

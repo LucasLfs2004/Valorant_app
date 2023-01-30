@@ -22,7 +22,7 @@ const Weapons = () => {
     }
 
     return (
-        <div className="agents">
+        <div className="weapons">
             <h1>Weapons</h1>
             <div className='cards'>
                 {

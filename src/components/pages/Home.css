@@ -6,6 +6,8 @@
 }
 
 .home {
+    top: 0;
+    bottom: 0;
     margin: 0;
     display: flex;
     flex-direction: row;
@@ -19,16 +21,16 @@
 }
 
 .image {
+    position: fixed;
+    z-index: 1;
     top: 80px;
     left: -30px;
     width: 900px !important;
-    position: absolute;
-    z-index: 1;
 }
 
 .background {
     width: 620px !important;
-    height: 800px;
+    height: auto;
     object-fit: cover;
     background-image: linear-gradient(to right, var(--color-2), var(--color-1));
     z-index: -1;

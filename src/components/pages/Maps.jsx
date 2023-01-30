@@ -24,22 +24,23 @@ const Maps = () => {
 
     return (
         <div className="maps">
-            <h1>Maps</h1>
-            <img src="" alt="" />
-            <div className='cards'>
-                {
-                    maps?.data?.length &&
-                    maps.data.map(
-                        (item, key) => (
-                            <Link to={`/maps/${item.uuid}`} >
-                                <div className='card-map' key={key}>
-                                    <img src={item.listViewIcon} alt="" />
-                                    <p>{item.displayName}</p>
-                                </div>
-                            </Link>
+            <div className="content">
+                <h1>Mapas</h1>
+                <div className='cards'>
+                    {
+                        maps?.data?.length &&
+                        maps.data.map(
+                            (item, key) => (
+                                <Link to={`/maps/${item.uuid}`} >
+                                    <div className='card-map' key={key}>
+                                        <img src={item.listViewIcon} alt="" />
+                                        <p>{item.displayName}</p>
+                                    </div>
+                                </Link>
+                            )
                         )
-                    )
-                }
+                    }
+                </div>
             </div>
         </div>
     )

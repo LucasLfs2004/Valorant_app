@@ -26,22 +26,18 @@ const MapSelected = () => {
 
     return (
         <div className='map-id'>
-            <h1>
-                {map.displayName}
-            </h1>
-            <img src={map.splash} alt="" />
-            <img src={map.displayIcon} alt="" />
-            <h2>Callouts</h2>
-            <div className="card-localidade">
-                {map?.callouts &&
-                    map.callouts.map(
-                        (item, key) => (
-                            <div key={key} className='callouts'>
-                                <p>Local: {item.regionName}</p>
-                                <p>Região: {item.superRegionName}</p>
-                            </div>
-                        )
-                    )}
+            <img className='bg-map' src={map.splash} alt="" />
+            <div className='conteudo'>
+                <h1>
+                    {map.displayName}
+                </h1>
+                <div className='display'>
+                    <img className='map-icon' src={map.displayIcon} alt="" />
+                    <div className='card-coordinates'>
+                        <h2>Coordenadas</h2>
+                        <p>{map.coordinates}</p>
+                    </div>
+                </div>
             </div>
         </div>
     )

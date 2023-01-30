@@ -1,8 +1,9 @@
-.cards {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+.maps {
+    width: 100%;
+    background: linear-gradient(0, var(--color-vinho), var(--color-cabernet));
+    padding-bottom: 100px;
+    font-family: Valorant-font;
+    padding-top: 30px;
 }
 
 .maps a {
@@ -10,10 +11,19 @@
     color: var(--color-vinho);
 }
 
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
 .card-map {
-    border: 1px solid grey;
-    padding: 2px;
+    background-image: linear-gradient(0, var(--color-cabernet), var(--color-vinho));
+    color: var(--color-bege);
+    border: 1px solid var(--color-bege);
     margin: 20px;
+    border-radius: 0 0px 20px 20px;
 }
 
 .card-map img {
