@@ -1,4 +1,5 @@
-import React from "react";
+import './NotFound.css'
+import React from 'react';
 
 const NotFound = props => (
     <div>

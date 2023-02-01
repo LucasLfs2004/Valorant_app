@@ -2,7 +2,7 @@ import './Agents.css';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import CardAgent from '../template/CardAgent';
+import CardAgent from './CardAgent';
 
 const Agents = () => {
     const [agents, setAgents] = useState([]);

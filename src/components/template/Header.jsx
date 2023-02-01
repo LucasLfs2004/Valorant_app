@@ -15,7 +15,7 @@ export default props => (
             <Link className='btn' to={"/agents"}>
                 Agentes
             </Link>
-            <Link className='btn' to={"/weapon"}>
+            <Link className='btn' to={"/weapons"}>
                 Armas
             </Link>
             <Link className='btn' to={"/maps"}>

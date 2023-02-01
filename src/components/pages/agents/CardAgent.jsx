@@ -1,6 +1,5 @@
 import './CardAgent.css';
 import React from 'react';
-import { Card } from '../StyledComponents/CardAgent/';
 
 const CardAgent = ({ image, bg_image, name, type, background_color1 }) => {
     console.log(background_color1)
