@@ -10,7 +10,7 @@ const Agents = () => {
         getAgents();
     }, [agents]
     );
-
+    
     const getAgents = async () => {
         try {
             const query = await axios.get('https://valorant-api.com/v1/agents');
@@ -23,7 +23,6 @@ const Agents = () => {
             console.log(err);
         }
     }
-
 
     return (
         <div className="agents">

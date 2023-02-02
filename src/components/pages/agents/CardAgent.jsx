@@ -2,11 +2,8 @@ import './CardAgent.css';
 import React from 'react';
 
 const CardAgent = ({ image, bg_image, name, type, background_color1 }) => {
-    console.log(background_color1)
-
 
     return (
-
         <div id='cardAgent' className='card'>
             <div id='visual-card' style={{ backgroundColor: background_color1[0] }}>
                 <img className='img-card' src={image} alt="" />
