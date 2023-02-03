@@ -1,0 +1,125 @@
+:root {
+  --bg-agent-1: #000;
+  --bg-agent-2: #000;
+  --bg-agent-3: #000;
+  --bg-agent-4: #000;
+  color: #FFF;
+}
+
+#agent-id {
+  background-image: linear-gradient(to right, var(--bg-agent-1), var(--bg-agent-4)) !important;
+  font-size: 1.4rem;
+}
+
+#agent-id h1 {
+  font-family: Valorant-font;
+  color: #BBB;
+  padding: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.conteudo-agent {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.poster {
+  top: -50px;
+  position: relative;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+
+.category-inclined {
+  position: absolute;
+  left: 0;
+  top: 400px;
+  font-family: Valorant-font;
+  rotate: 270deg;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+}
+
+.category-inclined img {
+  width: 75px;
+  height: 75px;
+  margin-right: 15px;
+}
+
+.category-inclined h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.full {
+  top: 0;
+  position: absolute;
+  width: 900px !important;
+  z-index: 2;
+}
+
+.infos {
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  color: var(--color-bege);
+  font-size: 1.2rem;
+  width: 600px;
+}
+
+.caracteristicas {
+  text-align: center;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  border: 2px ridge #CCC;
+}
+
+.display-agent {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-agent {
+  filter: opacity(0.8);
+  text-align: justify;
+  width: 500px;
+  border: 2px ridge #CCC;
+  margin: 20px;
+}
+
+.abilities p {
+  margin: 0px 10px 10px 10px;
+  font-size: 1.1rem;
+}
+
+.title-ability {
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-ability img {
+  width: 3.6rem;
+  margin-right: 15px;
+}
+
+.description {
+  width: 1000px;
+  font-size: 1.4rem;
+  text-align: justify;
+  margin: 20px;
+
+}

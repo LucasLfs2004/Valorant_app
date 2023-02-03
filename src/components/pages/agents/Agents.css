@@ -1,10 +1,10 @@
 .cards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .agents h1 {
-    font-family: Valorant-font;
+  font-family: Valorant-font;
 }
