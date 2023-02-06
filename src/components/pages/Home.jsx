@@ -1,6 +1,5 @@
 import './Home.css'
 import React from 'react';
-import Footer from '../template/Footer';
 
 const Home = props => (
     <div id="home">
@@ -15,7 +14,7 @@ const Home = props => (
             <p>Ingresse em um jogo extremamente divertido e competitivo</p>
             <p>Ainda não joga?</p>
             <div className='button-border'>
-                <a href="https://playvalorant.com/pt-br/?gclid=CjwKCAiAoL6eBhA3EiwAXDom5mNYfI9NtG1N6fvya40ANktgQFc_ZiMDLUCHoscBYrS6LBGVmDuzJRoCiZMQAvD_BwE&gclsrc=aw.ds" target="_blank">Jogar agora</a>
+                <a href="https://playvalorant.com/pt-br/?gclid=CjwKCAiAoL6eBhA3EiwAXDom5mNYfI9NtG1N6fvya40ANktgQFc_ZiMDLUCHoscBYrS6LBGVmDuzJRoCiZMQAvD_BwE&gclsrc=aw.ds" target="_blank" rel='noreferrer'>Jogar agora</a>
             </div>
         </div>
     </div>
