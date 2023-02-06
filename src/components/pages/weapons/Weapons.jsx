@@ -42,12 +42,12 @@ const Weapons = () => {
             <div className=''>
                 <select className='filtro' onChange={e => setCategory(e.target.value)} name="select">
                     <option onChange value="" selected>Filtrar</option>
-                    <option value="EEquippableCategory::Heavy">Metralhadoras</option>
-                    <option value="EEquippableCategory::SMG">Sub-metralhadoras</option>
+                    <option value="EEquippableCategory::Heavy">Metralhadora</option>
+                    <option value="EEquippableCategory::SMG">Sub-metralhadora</option>
                     <option value="EEquippableCategory::Rifle">Rifle de assalto</option>
                     <option value="EEquippableCategory::Sniper">Rifle de precisão</option>
                     <option value="EEquippableCategory::Shotgun">Escopeta</option>
-                    <option value="EEquippableCategory::Sidearm">Armas secundárias</option>
+                    <option value="EEquippableCategory::Sidearm">Arma secundária</option>
                     <option value="EEquippableCategory::Melee">Arma branca</option>
                 </select>
             </div>

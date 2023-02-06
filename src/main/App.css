@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
 @font-face {
   font-family: Valorant-font;
   src: url('../assets/fonts/Valorant\ Font.ttf');
@@ -8,7 +10,7 @@ h1 {
 }
 
 :root {
-  font-family: Valorant-font;
+  font-family: 'Josefin Sans', sans-serif;
   --color-bege: #FFFBF5;
   --color-vinho: #53212B;
   --color-vinho-claro: #BD3944;
@@ -42,6 +44,13 @@ body {
 
 .Content {
   flex: 1;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
   margin: 0;
   padding: 0;
 }

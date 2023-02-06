@@ -12,7 +12,7 @@ const Agents = () => {
 
   const getAgents = async () => {
     try {
-      const query = await axios.get('https://valorant-api.com/v1/agents');
+      const query = await axios.get('https://valorant-api.com/v1/agents?language=pt-BR');
 
       if (query.status < 300) {
         setAgents(query.data);
@@ -28,18 +28,20 @@ const Agents = () => {
       <h1>Operadores</h1>
       <div className='cards'>
         {
-          agents?.data?.length &&
+          agents?.data?.length && 
           agents.data.map(
-            (item, key) => (
-              <CardAgent key={key}
-                uuid={item.uuid}
-                image={item.fullPortrait}
-                bg_image={item.background}
-                name={item.displayName}
-                type={item.role?.displayName}
-                background_color1={item.backgroundGradientColors}>
-              </CardAgent>
-            )
+            (item, key) => {
+              if(item.uuid != "ded3520f-4264-bfed-162d-b080e2abccf9") return (
+                <CardAgent key={key}
+                  uuid={item.uuid}
+                  image={item.fullPortrait}
+                  bg_image={item.background}
+                  name={item.displayName}
+                  type={item.role?.displayName}
+                  background_color={item.backgroundGradientColors}>
+                </CardAgent>
+              )
+            }
           )
         }
       </div>

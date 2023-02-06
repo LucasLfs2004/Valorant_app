@@ -1,3 +1,8 @@
+.agents {
+  background: linear-gradient(0, #dcdcdc, var(--color-bege));
+  color: var(--color-cabernet);
+}
+
 .cards {
   display: flex;
   flex-direction: row;

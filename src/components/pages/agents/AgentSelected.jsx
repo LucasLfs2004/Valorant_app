@@ -43,8 +43,6 @@ const AgentSelected = () => {
           <img className='full' src={agent.fullPortrait} alt="" />
           <img className='bg' src={agent.background} alt="" />
         </div>
-        <div className="bg-agent">
-        </div>
         <div className='infos'>
           <div className="description">
             <p className='description'>{agent.description}</p>
@@ -57,7 +55,7 @@ const AgentSelected = () => {
             {
               agent.characterTags ?
                 <div className="card-agent">
-                  <h3>Atributos</h3>
+                  <h3 className='title-agent'>Atributos</h3>
                   {
                     agent.characterTags &&
                     agent.characterTags.map(
@@ -78,7 +76,7 @@ const AgentSelected = () => {
               agent.abilities.map(
                 (item, key) =>
                 (<div className='card-agent abilities' key={key}>
-                  <div className='title-ability'>
+                  <div className='title-agent'>
                     <img src={item.displayIcon} alt="" />
                     <h2>{item.displayName}</h2>
                     {/* <h2>{item.slot}</h2> */}

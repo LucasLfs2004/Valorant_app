@@ -1,76 +1,103 @@
 #weapon-id {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  font-family: 'Josefin Sans', sans-serif;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
 }
 
-
 #navbar-weapon-skins {
-    bottom: 0;
-    left: 0;
-    margin: 0;
-    width: 300px;
-    background-color: var(--color-bege);
+  position: relative;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  width: 20%;
+  background-color: var(--color-bege);
 }
 
 #navbar-weapon-skins h1 {
-    color: var(--color-cabernet);
-    font-family: Valorant-font;
+  color: var(--color-cabernet);
+  font-family: Valorant-font;
 }
 
 .btn-skins {
-    padding: 10px;
-    background-color: transparent;
-    cursor: pointer;
-    margin: 5px;
-    width: 100%;
-    border: none;
-    transition: all 1s ease;
+  padding: 15px 0;
+  background-color: transparent;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  transition: all 1s ease;
 }
 
 .btn-skins:hover {
-    background-color: var(--color-cabernet);
+  background-color: var(--color-cabernet);
 }
 
 .btn-skins:hover p {
-    color: var(--color-bege);
+  color: var(--color-bege);
 }
 
 .title-skin {
-    padding: 0;
-    margin: 0;
-    font-family: Valorant-font;
-    font-size: 1.4rem;
-    color: var(--color-cabernet);
+  padding: 0;
+  margin: 0;
+  font-family: Valorant-font;
+  font-size: 1.4rem;
+  color: var(--color-cabernet);
 }
 
 .img-weapon {
-    height: 140px;
+  height: 100px;
+  margin: 50px;
+}
+
+.title-weapon {
+  margin: 30px;
+}
+
+.weapon-content {
+  width: 80%;
+  background-color: var(--color-bege);
+  color: var(--color-cabernet);
+}
+
+.weapon-stats {
+  margin: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.stats {
+  margin: 50px;
+  text-align: justify;
+  color: black;
+  font-size: 1.4rem;
 }
 
 table {
-    border-collapse: collapse;
-    border: 1px solid #000;
+  font-size: 1.2rem;
+  border-collapse: collapse;
+  border: 1px solid #000;
 }
 
 caption {
-    padding: 10px;
-    border: 1px solid #000;
-    border-bottom: none;
+  padding: 10px;
+  border: 1px solid #000;
+  border-bottom: none;
 }
 
 tbody {
-    margin: 10px;
-    border: 1px solid #000;
+  margin: 10px;
+  border: 1px solid #000;
 }
 
 th {
-    width: 100px;
-    padding: 5px 15px;
-    border: 1px solid #000;
+  width: 100px;
+  padding: 5px 15px;
+  border: 1px solid #000;
 }
 
 td {
-    border: 1px solid #000;
+  border: 1px solid #000;
 }
-

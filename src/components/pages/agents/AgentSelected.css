@@ -9,6 +9,7 @@
 #agent-id {
   background-image: linear-gradient(to right, var(--bg-agent-1), var(--bg-agent-4)) !important;
   font-size: 1.4rem;
+  position: relative;
 }
 
 #agent-id h1 {
@@ -27,8 +28,9 @@
 
 .poster {
   top: -50px;
+  left: 100px;
   position: relative;
-  width: 700px;
+  width: 900px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,7 +40,7 @@
 
 .category-inclined {
   position: absolute;
-  left: 0;
+  left: -175px;
   top: 400px;
   font-family: Valorant-font;
   rotate: 270deg;
@@ -66,9 +68,15 @@
   z-index: 2;
 }
 
+.bg {
+  width: 600px !important;
+}
+
 .infos {
+  margin-left: 100px;
   display: flex;
   flex-direction: column;
+  
 }
 
 .description {
@@ -92,18 +100,19 @@
 
 .card-agent {
   filter: opacity(0.8);
-  text-align: justify;
+  text-align: center;
   width: 500px;
   border: 2px ridge #CCC;
   margin: 20px;
 }
 
-.abilities p {
+.card-agent p {
+  text-align: justify;
   margin: 0px 10px 10px 10px;
   font-size: 1.1rem;
 }
 
-.title-ability {
+.title-agent {
   font-size: 1.4rem;
   display: flex;
   flex-direction: row;
@@ -111,7 +120,7 @@
   align-items: center;
 }
 
-.title-ability img {
+.title-agent img {
   width: 3.6rem;
   margin-right: 15px;
 }
@@ -121,5 +130,4 @@
   font-size: 1.4rem;
   text-align: justify;
   margin: 20px;
-
 }

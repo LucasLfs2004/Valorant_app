@@ -3,7 +3,7 @@ import React from 'react';
 import Footer from '../template/Footer';
 
 const Home = props => (
-    <div className="home">
+    <div id="home">
         <div className='poster'>
             <img className='image' src="https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/fullportrait.png" alt="" />
             <img className='background' src="https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/background.png" alt="" />
