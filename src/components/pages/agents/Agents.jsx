@@ -2,13 +2,17 @@ import './Agents.css';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import CardAgent from './CardAgent';
+import { connect } from 'react-redux';
+import { changeTitle } from '../../../store/actions/title';
 
-const Agents = () => {
+const Agents = ({ title }) => {
   const [agents, setAgents] = useState([]);
   useEffect(() => {
     getAgents();
   }, [agents]
   );
+
+changeTitle(title = "Agentes")
 
   const getAgents = async () => {
     try {
@@ -49,4 +53,16 @@ const Agents = () => {
   )
 }
 
-export default Agents;
+function mapStateToProps(state) {
+  return {
+    title: state.title
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    changeTitle: (title) => dispatch(changeTitle(title)) 
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Agents);

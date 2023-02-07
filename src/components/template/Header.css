@@ -1,13 +1,16 @@
 #header {
     font-family: Valorant-font;
     height: 70px;
-    background-color: var(--color-bege);
-    color: var(--color-cabernet);
+    background-color: #111;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     margin: 0;
+}
+
+#header h1 {
+    color: #FFF;
 }
 
 #header a h1 {
@@ -34,7 +37,7 @@
 }
 
 .links a {
-    color: var(--color-cabernet);
+    color: #FFF;
     padding: 22px;
     border: none;
     margin: 0;
@@ -44,4 +47,8 @@
     font-family: Valorant-font;
     cursor: pointer;
     transition: all 0.5s ease;
+}
+
+.links a:hover {
+    color: var(--color-cabernet);
 }

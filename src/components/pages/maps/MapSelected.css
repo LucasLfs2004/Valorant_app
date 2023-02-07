@@ -1,11 +1,12 @@
 .map-id {
     margin: 0;
     height: 100%;
-    background-size: cover;
-    object-fit: cover;
     position: relative;
-    filter: blur(1px);
     filter: opacity(0.8);
+}
+
+.bg-map {
+    max-width: 1920px !important;
 }
 
 .conteudo {
@@ -32,6 +33,7 @@
 }
 
 .card-coordinates {
+    color: black;
     width: 600px;
     display: flex;
     flex-direction: row;
@@ -40,6 +42,6 @@
     align-items: center;
     border: 2px solid grey;
     border-radius: 20px;
-    background-color: rgb(255, 251, 245, 0.5);
+    background-color: rgb(255, 251, 245, 0.3);
 }
 

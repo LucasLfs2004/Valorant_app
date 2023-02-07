@@ -15,7 +15,11 @@ h1 {
   --color-vinho: #53212B;
   --color-vinho-claro: #BD3944;
   --color-cabernet: #fd4556;
-  --preto: #000;
+  --color-preto: #000;
+  --color-1: #90e3fdff;
+  --color-2: #557f8cff;
+  --color-3: #2b4e7cff;
+  --color-4: #1e3344ff;
 }
 
 html,
