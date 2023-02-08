@@ -1,4 +1,5 @@
 .weapons {
+    font-family: Valorant-font;
     position: relative;
     background-color: var(--color-bege);
 }
@@ -24,15 +25,15 @@
 }
 
 .cards-weapon a {
+    color: var(--color-bege);
     text-decoration: none;
-    color: black;
     margin: 20px;
 }
 
 .card-weapon {
     border-radius: 20px;
     width: 400px;
-    background-color: rgb(0, 0, 0, 0.3);
+    background-color: var(--color-cabernet);
     border: 2px inset var(--color-cabernet);
     z-index: 1;
 }
@@ -40,4 +41,19 @@
 .card-weapon img {
     height: 75px;
     padding-top: 10px;
+}
+
+@media (max-width: 500px) {
+    .filtro {
+        display: none;
+    }
+
+    .card-weapon {
+        width: 320px;
+    }
+
+    .card-weapon img {
+        height: 60px;
+    }
+
 }

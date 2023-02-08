@@ -10,14 +10,14 @@ const CardAgent = ({ uuid, image, bg_image, name, type, background_color }) => {
   }
   return (
     <Link to={`/agents/${uuid}`} >
-      <div id='cardAgent' className='card' style={styles.backgrounCard}>
+      <div id='card-agent' className='card' style={styles.backgrounCard}>
         <div id='visual-card'>
           <img className='img-card' src={image} alt="" />
           <img className='bg-img-card' src={bg_image} alt="" />
         </div>
-        <div className="name">
-          <p>{name}</p>
-          <p>{type}</p>
+        <div className="name-category">
+          <p className='name'>{name}</p>
+          <p className='category'>{type}</p>
         </div>
       </div >
     </Link>

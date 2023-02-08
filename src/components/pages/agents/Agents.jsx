@@ -2,8 +2,6 @@ import './Agents.css';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import CardAgent from './CardAgent';
-import { connect } from 'react-redux';
-import { changeTitle } from '../../../store/actions/title';
 
 const Agents = (props) => {
 
@@ -31,18 +29,21 @@ const Agents = (props) => {
       <div className='cards'>
         {
           agents?.data?.length &&
-          agents.data.map(
+          agents?.data?.map(
             (item, key) => {
-              if (item.uuid != "ded3520f-4264-bfed-162d-b080e2abccf9") return (
-                <CardAgent key={key}
-                  uuid={item.uuid}
-                  image={item.fullPortrait}
-                  bg_image={item.background}
-                  name={item.displayName}
-                  type={item.role?.displayName}
-                  background_color={item.backgroundGradientColors}>
-                </CardAgent>
-              )
+              if (item.uuid != "ded3520f-4264-bfed-162d-b080e2abccf9") {
+                return (
+                  <CardAgent key={key}
+                    uuid={item.uuid}
+                    image={item.fullPortrait}
+                    bg_image={item.background}
+                    name={item.displayName}
+                    type={item.role?.displayName}
+                    background_color={item.backgroundGradientColors}>
+                  </CardAgent>
+                )
+              }
+              return <></>
             }
           )
         }
