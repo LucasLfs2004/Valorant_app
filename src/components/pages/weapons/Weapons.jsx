@@ -37,8 +37,6 @@ const Weapons = () => {
 
     return (
         <div className="weapons">
-            <h1>Weapons</h1>
-
             <div className=''>
                 <select className='filtro' onChange={e => setCategory(e.target.value)} name="select">
                     <option onChange value="" selected>Filtrar</option>

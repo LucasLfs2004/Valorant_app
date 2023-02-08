@@ -1,15 +1,13 @@
-import { createStore } from "redux";
+import { createStore, combineReducers } from 'redux'
 
-const INITIAL_STATE = {
-  title: "OLA"
+import titleReducer from './reducers/title'
+
+const reducers = combineReducers({
+    title: titleReducer,
+})
+
+function storeConfig() {
+    return createStore(reducers)
 }
 
-function reducer(state = INITIAL_STATE, action) {
-  if (action.type === 'NEW_TITLE') {
-    return { ...state, title: action.title }
-  }
-}
-
-const store = createStore(reducer);
-
-export default store;
+export default storeConfig

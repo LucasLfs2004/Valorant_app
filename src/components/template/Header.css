@@ -1,54 +1,106 @@
 #header {
-    font-family: Valorant-font;
-    height: 70px;
-    background-color: #111;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0;
-}
-
-#header h1 {
-    color: #FFF;
+  font-family: Valorant-font;
+  background-color: #111;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  z-index: 2;
+  color: #FFF;
+  min-height: 70px;
 }
 
 #header a h1 {
-    margin: 15px;
+  margin: 0px;
 }
 
 #header a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-.title {
-    color: var(--color-cabernet);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.content-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 48px;
+}
+
+.logo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo a {
+  color: #FFF;
 }
 
 .links {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .links a {
-    color: #FFF;
-    padding: 22px;
-    border: none;
-    margin: 0;
-    font-size: 24px;
-    position: relative;
-    box-sizing: border-box;
-    font-family: Valorant-font;
-    cursor: pointer;
-    transition: all 0.5s ease;
+  color: #FFF;
+  padding: 10px;
+  border: none;
+  margin: 0;
+  font-size: 24px;
+  position: relative;
+  box-sizing: border-box;
+  font-family: Valorant-font;
+  cursor: pointer;
+  transition: all 0.5s ease;
 }
 
 .links a:hover {
+  color: var(--color-cabernet);
+}
+
+.content-bottom {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  color: var(--color-cabernet);
+}
+
+@media (max-width: 500px) {
+  #header {
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .logo a {
     color: var(--color-cabernet);
+  }
+
+  .content-top {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .links {
+
+  }
+  
+  .links a {
+    font-size: 1rem;
+  }
+
+  .content-bottom {
+    display: none;
+  }
 }

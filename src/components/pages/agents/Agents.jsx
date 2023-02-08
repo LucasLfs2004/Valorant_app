@@ -5,14 +5,13 @@ import CardAgent from './CardAgent';
 import { connect } from 'react-redux';
 import { changeTitle } from '../../../store/actions/title';
 
-const Agents = ({ title }) => {
+const Agents = (props) => {
+
   const [agents, setAgents] = useState([]);
   useEffect(() => {
     getAgents();
   }, [agents]
   );
-
-changeTitle(title = "Agentes")
 
   const getAgents = async () => {
     try {
@@ -29,13 +28,12 @@ changeTitle(title = "Agentes")
 
   return (
     <div className="agents">
-      <h1>Operadores</h1>
       <div className='cards'>
         {
-          agents?.data?.length && 
+          agents?.data?.length &&
           agents.data.map(
             (item, key) => {
-              if(item.uuid != "ded3520f-4264-bfed-162d-b080e2abccf9") return (
+              if (item.uuid != "ded3520f-4264-bfed-162d-b080e2abccf9") return (
                 <CardAgent key={key}
                   uuid={item.uuid}
                   image={item.fullPortrait}
@@ -52,17 +50,4 @@ changeTitle(title = "Agentes")
     </div>
   )
 }
-
-function mapStateToProps(state) {
-  return {
-    title: state.title
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    changeTitle: (title) => dispatch(changeTitle(title)) 
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Agents);
+export default Agents

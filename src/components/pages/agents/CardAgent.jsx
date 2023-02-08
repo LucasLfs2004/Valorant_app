@@ -8,7 +8,6 @@ const CardAgent = ({ uuid, image, bg_image, name, type, background_color }) => {
       background: `linear-gradient(90deg, #${background_color[0]} 0%, #${background_color[1]} 35%, #${background_color[2]} 100%)`
     }
   }
-  console.log(styles.backgrounCard)
   return (
     <Link to={`/agents/${uuid}`} >
       <div id='cardAgent' className='card' style={styles.backgrounCard}>

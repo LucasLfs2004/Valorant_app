@@ -25,7 +25,6 @@ const Maps = () => {
     return (
         <div className="maps">
             <div className="content">
-                <h1>Mapas</h1>
                 <div className='cards'>
                     {
                         maps?.data?.length &&

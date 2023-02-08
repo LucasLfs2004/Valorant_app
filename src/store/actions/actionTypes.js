@@ -1,0 +1,1 @@
+export const NEW_TITLE = 'NEW_TITLE'
