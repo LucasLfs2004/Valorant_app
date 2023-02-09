@@ -20,7 +20,6 @@ const AgentSelected = () => {
       if (query.status < 300) {
         setAgent(query.data.data);
         setBackground(agent.backgroundGradientColors);
-        console.log(background[0]);
         document.body.style.setProperty("--bg-agent-1", `#${background[0]}`);
         document.body.style.setProperty("--bg-agent-2", `#${background[1]}`);
         document.body.style.setProperty("--bg-agent-3", `#${background[2]}`);
@@ -36,10 +35,10 @@ const AgentSelected = () => {
       <h1>{agent.displayName}</h1>
       <section className='conteudo-agent'>
         <div className='poster'>
-          <div className="category-inclined">
-            <img src={agent.role?.displayIcon} alt="" />
-            <h2>{agent.role?.displayName}</h2>
-          </div>
+        <div className="category-inclined">
+          <img src={agent.role?.displayIcon} alt="" />
+          <h2>{agent.role?.displayName}</h2>
+        </div>
           <img className='full' src={agent.fullPortrait} alt="" />
           <img className='bg' src={agent.background} alt="" />
         </div>

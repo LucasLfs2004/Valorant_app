@@ -104,3 +104,42 @@
     display: none;
   }
 }
+
+@media (max-width: 500px) {
+  #header {
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .logo img {
+    width: 24px;
+  }
+
+  .logo a {
+    font-size: 1.2rem;
+    color: var(--color-cabernet);
+  }
+
+  .content-top {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .links {
+
+  }
+  
+  .links a {
+    font-size: 0.8rem;
+  }
+
+  .content-bottom {
+    display: none;
+  }
+}

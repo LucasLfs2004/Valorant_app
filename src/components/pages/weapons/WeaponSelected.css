@@ -4,6 +4,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   position: relative;
+  height: 100%;
 }
 
 #navbar-weapon-skins {
@@ -65,11 +66,15 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+}
+
+.container {
+  margin: 0 100px;
 }
 
 .stats {
-  margin: 50px;
+  margin: 100px;
   text-align: justify;
   color: black;
   font-size: 1.4rem;
@@ -83,6 +88,7 @@ table {
 
 caption {
   padding: 10px;
+
   border: 1px solid #000;
   border-bottom: none;
 }
@@ -100,4 +106,110 @@ th {
 
 td {
   border: 1px solid #000;
+}
+
+@media (max-width: 500px) {
+  #navbar-weapon-skins {
+    width: 30%;
+  }
+  
+  #navbar-weapon-skins h1 {
+    font-size: 1rem;
+  }
+  
+  .title-skin{
+    color: var(--color-bege);
+    font-size: 0.6rem;
+  }
+  .weapon-content {
+    width: 70%;
+  }
+  .btn-skins {
+    padding: 5px 0;
+    border-top: 1px solid var(--color-cabernet);
+  }
+  
+    .img-weapon {
+      height: 50px;
+      margin: 0;
+    }
+  
+    .weapon-stats {
+      margin: 0;
+    }
+    .stats {
+      font-size: 0.8rem;
+      margin: 20px 5px;
+    }
+}
+
+@media (max-width: 300px) and (min-width: 250px) {
+  .weapon-content h1 {
+    font-size: 1.2rem;
+  }
+
+  .img-weapon {
+    height: 35px;
+  }
+
+  table {
+    margin-top: 10px;
+    font-size: 0.6rem;
+    width: 185px !important;
+  }
+  th {
+    padding: 3px 4px;
+  }
+}
+
+@media (max-width: 360px) and (min-width: 301px) {
+  .weapon-content h1 {
+    font-size: 1.2rem;
+  }
+
+  .img-weapon {
+    height: 45px;
+  }
+
+  table {
+    margin: 10px 5px 5px 0;
+    font-size: 0.6rem;
+    width: 240px !important;
+  }
+  th {
+    padding: 3px 4px;
+  }
+}
+
+@media (max-width: 400px) and (min-width: 361px) {
+  .weapon-content h1 {
+    font-size: 1.2rem;
+  }
+  table {
+    margin: 10px 5px 5px 0;
+    font-size: 0.6rem;
+    width: 260px !important;
+  }
+  th {
+    padding: 3px 4px;
+  }
+}
+
+@media (max-width: 450px) and (min-width: 401px) {
+  .weapon-content h1 {
+    font-size: 1.2rem;
+  }
+
+  .img-weapon {
+    height: 50px;
+  }
+
+  table {
+    margin: 10px 5px 5px 0;
+    font-size: 0.6rem;
+    width: 260px !important;
+  }
+  th {
+    padding: 3px 4px;
+  }
 }

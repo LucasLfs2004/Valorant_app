@@ -45,3 +45,18 @@
         width: 320px;
     }
 }
+
+@media (max-width: 300px) {
+    .maps {
+        padding: 0;
+        padding-bottom: 20px;
+    }
+
+    .card-map {
+        margin: 20px 0 0 0;
+    }
+
+    .card-map img {
+        width: 260px;
+    }
+}
