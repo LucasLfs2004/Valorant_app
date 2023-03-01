@@ -2,8 +2,13 @@ import './Maps.css';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { changeTitle } from '../../../store/actions/title';
 
-const Maps = () => {
+const Maps = (props) => {
+
+    const { title } = props;
+
     const [maps, setMaps] = useState([]);
     useEffect(() => {
         getMaps();
@@ -16,6 +21,7 @@ const Maps = () => {
 
             if (query.status < 300) {
                 setMaps(query.data);
+                props.changeTitle("Mapas");
             }
         } catch (err) {
             console.log(err);
@@ -45,4 +51,25 @@ const Maps = () => {
     )
 }
 
-export default Maps;
+
+function mapStateToProps(state) {
+    return {
+      title: state.title.title,
+    };
+  }
+  
+  function mapDispatchToProps(dispatch) {
+    return {
+      changeTitle(title) {
+        // action creator -> action
+        const action = changeTitle(title);
+        dispatch(action);
+      },
+    };
+  }
+  
+  
+  export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(Maps);

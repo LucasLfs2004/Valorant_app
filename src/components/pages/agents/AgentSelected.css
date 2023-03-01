@@ -28,7 +28,7 @@
 }
 
 .poster {
-  top: -50px;
+  top: 30px;
   left: 100px;
   position: relative;
   width: 900px;
@@ -99,8 +99,10 @@
 }
 
 .card-agent {
+  display: flex;
+  flex-direction: column;
   filter: opacity(0.8);
-  text-align: center;
+  justify-content: center;
   width: 500px;
   border: 2px ridge #CCC;
   margin: 20px;

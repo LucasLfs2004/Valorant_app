@@ -1,8 +1,13 @@
 import './MapSelected.css'
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { connect } from 'react-redux';
+import { changeTitle } from '../../../store/actions/title';
 
-const MapSelected = () => {
+const MapSelected = (props) => {
+
+    const { title } = props;
+
     const uri = window.location.pathname.split('/').slice(2);
     const uuid = uri[0];
 
@@ -18,6 +23,7 @@ const MapSelected = () => {
 
             if (query.status < 300) {
                 setMap(query.data.data);
+                props.changeTitle(map.displayName);
             }
         } catch (err) {
             console.log(err);
@@ -28,9 +34,9 @@ const MapSelected = () => {
         <div className='map-id'>
             <img className='bg-map' src={map.splash} alt="" />
             <div className='conteudo'>
-                <h1>
+                {/* <h1>
                     {map.displayName}
-                </h1>
+                </h1> */}
                 <div className='display'>
                     <img className='map-icon' src={map.displayIcon} alt="" />
                     <div className='card-coordinates'>
@@ -43,4 +49,25 @@ const MapSelected = () => {
     )
 }
 
-export default MapSelected;
+
+function mapStateToProps(state) {
+    return {
+      title: state.title.title,
+    };
+  }
+  
+  function mapDispatchToProps(dispatch) {
+    return {
+      changeTitle(title) {
+        // action creator -> action
+        const action = changeTitle(title);
+        dispatch(action);
+      },
+    };
+  }
+  
+  
+  export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(MapSelected);

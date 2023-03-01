@@ -1,8 +1,14 @@
 import './AgentSelected.css';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { changeTitle } from '../../../store/actions/title';
+import { connect } from 'react-redux';
 
-const AgentSelected = () => {
+const AgentSelected = (props) => {
+  
+  // Título do Header
+  const { title } = props;
+  
   const uri = window.location.pathname.split('/').slice(2);
   const uuid = uri[0];
 
@@ -19,6 +25,7 @@ const AgentSelected = () => {
 
       if (query.status < 300) {
         setAgent(query.data.data);
+        props.changeTitle(agent.displayName);
         setBackground(agent.backgroundGradientColors);
         document.body.style.setProperty("--bg-agent-1", `#${background[0]}`);
         document.body.style.setProperty("--bg-agent-2", `#${background[1]}`);
@@ -32,7 +39,7 @@ const AgentSelected = () => {
 
   return (
     <div id='agent-id'>
-      <h1>{agent.displayName}</h1>
+      {/* <h1>{agent.displayName}</h1> */}
       <section className='conteudo-agent'>
         <div className='poster'>
         <div className="category-inclined">
@@ -90,4 +97,24 @@ const AgentSelected = () => {
   )
 }
 
-export default AgentSelected;
+function mapStateToProps(state) {
+  return {
+    title: state.title.title,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    changeTitle(title) {
+      // action creator -> action
+      const action = changeTitle(title);
+      dispatch(action);
+    },
+  };
+}
+
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(AgentSelected);

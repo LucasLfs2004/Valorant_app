@@ -2,8 +2,13 @@ import './Weapons.css';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { changeTitle } from '../../../store/actions/title';
 
-const Weapons = () => {
+const Weapons = (props) => {
+
+    const { title } = props;
+
     const [weapons, setWeapons] = useState([]);
     const [category, setCategory] = useState(null);
     useEffect(() => {
@@ -25,6 +30,7 @@ const Weapons = () => {
                     );
                     console.log(query.data)
                     setWeapons(query.data);
+                    props.changeTitle("Armas");
                     //setWeapons(query.data);
                 } else {
                     setWeapons(query.data);
@@ -68,4 +74,24 @@ const Weapons = () => {
     )
 }
 
-export default Weapons;
+function mapStateToProps(state) {
+    return {
+      title: state.title.title,
+    };
+  }
+  
+  function mapDispatchToProps(dispatch) {
+    return {
+      changeTitle(title) {
+        // action creator -> action
+        const action = changeTitle(title);
+        dispatch(action);
+      },
+    };
+  }
+  
+  
+  export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(Weapons);

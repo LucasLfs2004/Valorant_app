@@ -4,6 +4,16 @@ Bem vindo à aplicação web sobre o jogo Valorant, com o foco em ser um projeto
 
 
 
+# Responsável pelo projeto
+Lucas Ferreira Silva é o responsável pela ideia de fazer uma aplicação voltada ao jogo Valorant, idealização das interfaces e desenvolvimento da aplicação em React.JS.
+
+Linkedin: [Lucas Ferreira Silva](https://www.linkedin.com/in/lucas-sil-va/)
+
+# Versão depreciada!!!
+Esta versão não está tão agradável e funcional quanto foi planejada, os cards parecem algo antigo e mal feito, devem ser feitas muitas alterações no layout e design da página, por isso, este diretório será descontinuado e será usado apenas como base para uma reformulação do projeto, visando a melhora do layout, transformando em uma página mais atrativa e agradável para se caso quando terminado, ser hospedado e atrair mais pessoas a acessarem mais o site.
+
+# Finalidade do projeto de Valorant
+Esse projeto foi feito exclusivamente para a prática e aprenddizado da linguagem de programação React.JS 
 
 # Getting Started with Create React App
 
