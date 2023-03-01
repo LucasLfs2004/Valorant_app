@@ -1,19 +1,40 @@
 # App Valorant
 
-Bem vindo à aplicação web sobre o jogo Valorant, com o foco em ser um projeto de construção de uma wiki sobre o game, com dados dos personagens, mapas e armas, consumindo a API [Valorant API](https://valorant-api.com/).
+Bem vindo à aplicação web sobre o jogo Valorant, com o foco em ser um projeto de construção de uma wiki sobre o game competitivo online, com dados dos personagens, mapas e armas, consumindo a API [Valorant API](https://valorant-api.com/).
 
-
-
-# Responsável pelo projeto
+## Responsável pelo projeto
 Lucas Ferreira Silva é o responsável pela ideia de fazer uma aplicação voltada ao jogo Valorant, idealização das interfaces e desenvolvimento da aplicação em React.JS.
 
 Linkedin: [Lucas Ferreira Silva](https://www.linkedin.com/in/lucas-sil-va/)
 
-# Versão depreciada!!!
-Esta versão não está tão agradável e funcional quanto foi planejada, os cards parecem algo antigo e mal feito, devem ser feitas muitas alterações no layout e design da página, por isso, este diretório será descontinuado e será usado apenas como base para uma reformulação do projeto, visando a melhora do layout, transformando em uma página mais atrativa e agradável para se caso quando terminado, ser hospedado e atrair mais pessoas a acessarem mais o site.
+## Versão Principal
+Esta branch contém a continuação do projeto de valorant, onde serão feitas as alterações de layout, design e usabilidade, visando uma melhora do app.
 
-# Finalidade do projeto de Valorant
+As alterações serão listadas a seguir:
+#### Páginas em geral
+- Otimizar a aplicação;
+- garantir que as páginas não tenham rebarbas brancas em lugar algum;
+
+#### Página de Agentes
+- Realizar a retirada de Cards dessa página.
+- Realizar a construção de um carrossel, onde na seção de Operadores, venha um personagem selecionado, com todos os dados e características, com a opção de mudar de personagem por meio de setas.
+
+#### Página de armas
+- Estilizar os cards de uma forma mais atraente, ou realizar a esclusão da página de cards, fazendo assim um carrossel com uma única arma por vez, onde a cada clique na seta lateral, será trocada a arma;
+- Construir um background mais atraente, ou realizar a troca do background por um wallpaper que seja mais chamativo para a página;
+- Fazer uma nova organização das estatísticas das armas;
+
+#### Página de Mapas
+- Construir um background mais atraente, ou realizar a troca do background por um wallpaper que seja mais chamativo para a página;
+- Pensar em informações adicionais para adicionar aos mapas selecionados, fazendo com que seja uma página mais interessante de se participar;
+- Estilizar os cards de forma mais atraente, ou construir um carrossel igual ao proposto na página de armas;
+
+#### Sobre nós
+Realizar a confecção da página, adicionando informações sobre o desenvolvedor do projeto e finalidades (Caso surjam mais ideias para essa página, fazer a adição no projeto e documentar por meio dessa lista).
+
+## Finalidade do projeto de Valorant
 Esse projeto foi feito exclusivamente para a prática e aprenddizado da linguagem de programação React.JS 
+Esse também foi desenvolvido devido ao interesse e gosto por jogos FPS competitivos
 
 # Getting Started with Create React App
 
