@@ -43,7 +43,7 @@ const Weapons = (props) => {
 
     return (
         <div className="weapons">
-            <div className=''>
+            {/* <div className=''>
                 <select className='filtro' onChange={e => setCategory(e.target.value)} name="select">
                     <option onChange value="" selected>Filtrar</option>
                     <option value="EEquippableCategory::Heavy">Metralhadora</option>
@@ -54,7 +54,7 @@ const Weapons = (props) => {
                     <option value="EEquippableCategory::Sidearm">Arma secundária</option>
                     <option value="EEquippableCategory::Melee">Arma branca</option>
                 </select>
-            </div>
+            </div> */}
             <div className='cards-weapon'>
                 {
                     weapons?.data?.length &&
