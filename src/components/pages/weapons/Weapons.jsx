@@ -7,8 +7,6 @@ import { changeTitle } from '../../../store/actions/title';
 
 const Weapons = (props) => {
 
-    const { title } = props;
-
     const [weapons, setWeapons] = useState([]);
     const [category, setCategory] = useState(null);
     useEffect(() => {
@@ -21,7 +19,7 @@ const Weapons = (props) => {
             const query = await axios.get('https://valorant-api.com/v1/weapons');
 
             if (query.status < 300) {
-                if (category != null && category != "") {
+                if (category !== null && category !== "") {
                     query.data.data = query.data.data.filter(
                         listCategory => {
                             if (listCategory.category === category)
@@ -89,7 +87,6 @@ function mapStateToProps(state) {
       },
     };
   }
-  
   
   export default connect(
     mapStateToProps,

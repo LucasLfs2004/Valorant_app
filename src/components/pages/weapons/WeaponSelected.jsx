@@ -41,8 +41,8 @@ const WeaponSelected = (props) => {
         {weapon?.skins &&
           weapon.skins.map((item, key) => (
             <div key={key}>
-              {item.displayName != `${weapon.displayName} Padrão` &&
-              item.displayName != "Skin Favorita Aleatória" ? (
+              {item.displayName !== `${weapon.displayName} Padrão` &&
+              item.displayName !== "Skin Favorita Aleatória" ? (
                 <button
                   key={key}
                   onClick={(e) => setSkin(item.displayName)}
@@ -62,12 +62,12 @@ const WeaponSelected = (props) => {
           : props.changeTitle(skin)}
         <div className="weapon-stats">
           <div className="container">
-            {skin == "standard" ? (
+            {skin === "standard" ? (
               <img className="img-weapon" src={weapon.displayIcon} alt="" />
             ) : (
               weapon?.skins &&
               weapon.skins.map((item, key) => {
-                if (skin == item.displayName)
+                if (skin === item.displayName)
                   return (
                     <img
                       className="img-weapon"
@@ -119,17 +119,17 @@ const WeaponSelected = (props) => {
                   Penetração de parede:
                   {weapon.weaponStats?.wallPenetration
                     .split("::")
-                    .slice(1)[0] == "High"
+                    .slice(1)[0] === "High"
                     ? " Alto"
                     : ""}
                   {weapon.weaponStats?.wallPenetration
                     .split("::")
-                    .slice(1)[0] == "Medium"
+                    .slice(1)[0] === "Medium"
                     ? " Médio"
                     : ""}
                   {weapon.weaponStats?.wallPenetration
                     .split("::")
-                    .slice(1)[0] == "Low"
+                    .slice(1)[0] === "Low"
                     ? " Baixo"
                     : ""}
                 </p>

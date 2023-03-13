@@ -7,8 +7,6 @@ import { changeTitle } from '../../../store/actions/title';
 
 const Maps = (props) => {
 
-    const { title } = props;
-
     const [maps, setMaps] = useState([]);
     useEffect(() => {
         getMaps();

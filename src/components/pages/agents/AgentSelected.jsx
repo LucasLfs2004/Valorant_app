@@ -6,9 +6,6 @@ import { connect } from 'react-redux';
 
 const AgentSelected = (props) => {
   
-  // Título do Header
-  const { title } = props;
-  
   const uri = window.location.pathname.split('/').slice(2);
   const uuid = uri[0];
 

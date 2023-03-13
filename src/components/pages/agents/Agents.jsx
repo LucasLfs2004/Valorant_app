@@ -6,7 +6,6 @@ import { changeTitle } from "../../../store/actions/title";
 import { connect } from "react-redux";
 
 const Agents = (props) => {
-  const { title } = props;
 
   const [agents, setAgents] = useState([]);
   useEffect(() => {
@@ -32,7 +31,7 @@ const Agents = (props) => {
     <div className="agents">
       {agents?.data?.length &&
         agents?.data?.map((item, key) => {
-          if (item.uuid != "ded3520f-4264-bfed-162d-b080e2abccf9") {
+          if (item.uuid !== "ded3520f-4264-bfed-162d-b080e2abccf9") {
             return (
               <CardAgent
                 key={key}
