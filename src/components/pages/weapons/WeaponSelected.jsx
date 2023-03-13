@@ -2,7 +2,7 @@ import "./WeaponSelected.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { connect } from "react-redux";
-import { changeTitle } from "../../../store/actions/title";
+import { changeTitle } from "../../../store/actions/functions";
 
 const WeaponSelected = (props) => {
   const { title } = props;

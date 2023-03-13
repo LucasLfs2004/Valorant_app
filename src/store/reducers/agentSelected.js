@@ -1,15 +1,15 @@
-import { NEW_TITLE } from "../actions/actionTypes"
+import { AGENT_SELECTED } from "../actions/actionTypes"
 
 const initialState = {
-  title: "",
+  agentSelected: 0,
 }
 
 export default function(state = initialState, action) {
   switch(action.type) {
-      case NEW_TITLE:
+      case AGENT_SELECTED:
           return {
               ...state,
-              title: action.payload
+              agentSelected: action.payload
           }
       default:
           return state

@@ -2,7 +2,7 @@ import './MapSelected.css'
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
-import { changeTitle } from '../../../store/actions/title';
+import { changeTitle } from '../../../store/actions/functions';
 
 const MapSelected = (props) => {
 

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { changeTitle } from '../../../store/actions/title';
+import { changeTitle } from '../../../store/actions/functions';
 
 const Weapons = (props) => {
 

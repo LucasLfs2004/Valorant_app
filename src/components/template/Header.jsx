@@ -4,7 +4,7 @@ import iconValorant from '../../assets/img/icons8-valorant-48.png';
 import { Link } from 'react-router-dom';
 
 import { connect } from 'react-redux';
-import { changeTitle } from '../../store/actions/title';
+import { changeTitle } from '../../store/actions/functions';
 
 const Header = (props) => {
 
@@ -23,7 +23,7 @@ const Header = (props) => {
         </div>
 
         <div className="links">
-          <Link className='btn' to={"/agents"} onClick={() => props.changeTitle("Operadores")}>
+          <Link className='btn' to={"/agents"} >
             Agentes
           </Link>
           <Link className='btn' to={"/weapons"} onClick={() => props.changeTitle("Armas")}>
