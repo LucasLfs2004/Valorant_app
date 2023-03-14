@@ -134,6 +134,10 @@
   margin: 20px;
 }
 
+button {
+  z-index: 1;
+}
+
 @media (max-width: 500px) {
   #agent-id {
     width: 100%;

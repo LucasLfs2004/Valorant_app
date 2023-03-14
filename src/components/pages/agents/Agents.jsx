@@ -1,27 +1,23 @@
 import "./Agents.css";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { changeTitle } from "../../../store/actions/functions";
-import { changeAgentSelected } from "../../../store/actions/functions";
+import { changeTitle, changeAgentSelected, setAgent, setAgents } from "../../../store/actions/functions";
 import { connect } from "react-redux";
+import Navigation from "./NavigationAgent";
 
 const Agents = (props) => {
 
-  const { agentSelected } = props
+  const { agentSelected, agent, agents } = props
 
   // const [agentSelected, setAgentSelected] = useState(10);
   const [background, setBackground] = useState([]);
-  const [agent, setAgent] = useState({});
-  const [agents, setAgents] = useState(1);
+  // const [agent, setAgent] = useState({});
+  // const [agents, setAgents] = useState(1);
   useEffect(() => {
     getAgents();
   }, [agent,agentSelected]);
 
 
-  function alternateAgent(value) {
-    props.changeAgentSelected(agentSelected + value)
-    
-  }
 
   const getAgents = async () => {
     try {
@@ -30,11 +26,11 @@ const Agents = (props) => {
       );
 
       if (query.status < 300) {
-        setAgent(query.data.data[props.agentSelected]);
-        setAgents(query.data.data.length);
+        props.setAgent(query.data.data[props.agentSelected]);
+        props.setAgents(query.data.data.length);
         props.changeTitle(agent.displayName);
         setBackground(agent.backgroundGradientColors);
-        console.log(background)
+        //console.log(background)
         document.body.style.setProperty("--bg-agent-1", `#${background[0]}`);
         document.body.style.setProperty("--bg-agent-2", `#${background[1]}`);
         document.body.style.setProperty("--bg-agent-3", `#${background[2]}`);
@@ -47,26 +43,7 @@ const Agents = (props) => {
 
   return (
     <div id='agent-id'>
-      {/* <button onClick={() => {
-        console.log("agents", agents, " posicao ", agentSelected)
-        if (agentSelected < agents - 1) {
-          if (agent.uuid === "117ed9e3-49f3-6512-3ccf-0cada7e3823b") {
-            return alternateAgent(2)
-          } else alternateAgent(1)
-        }
-
-      }
-      }>ADD</button>
-      <button onClick={() => {
-        if (agentSelected > 0) {
-          if (agent.uuid === "320b2a48-4d9b-a075-30f1-1f93a9b638fa") {
-            return alternateAgent(-2)
-          }
-          alternateAgent(-1)
-        }
-      }
-      }>SUB</button> */}
-      {/* <h1>{agents.displayName}</h1> */}
+      <Navigation />
       <section className='conteudo-agent'>
         <div className='poster'>
           <div className="category-inclined">
@@ -128,7 +105,9 @@ const Agents = (props) => {
 function mapStateToProps(state) {
   return {
     title: state.title.title,
-    agentSelected: state.title.agentSelected
+    agentSelected: state.title.agentSelected,
+    agent: state.title.agent,
+    agents: state.title.agents,
   };
 }
 
@@ -141,6 +120,14 @@ function mapDispatchToProps(dispatch) {
     },
     changeAgentSelected(agentSelected) {
       const action = changeAgentSelected(agentSelected);
+      dispatch(action);
+    },
+    setAgent(agent) {
+      const action = setAgent(agent);
+      dispatch(action);
+    },
+    setAgents(agents) {
+      const action = setAgents(agents);
       dispatch(action);
     }
   };

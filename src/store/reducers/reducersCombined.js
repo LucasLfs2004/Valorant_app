@@ -1,8 +1,10 @@
-import { NEW_TITLE, AGENT_SELECTED } from "../actions/actionTypes"
+import { NEW_TITLE, AGENT_SELECTED, AGENT, AGENTS } from "../actions/actionTypes"
 
 const initialState = {
   title: "",
-  agentSelected: 0
+  agentSelected: 0,
+  agent: {},
+  agents: 0
 }
 
 export default function (state = initialState, action) {
@@ -16,6 +18,16 @@ export default function (state = initialState, action) {
       return {
         ...state,
         agentSelected: action.payload
+      }
+    case AGENT:
+      return {
+        ...state,
+        agent: action.payload
+      }
+    case AGENTS:
+      return {
+        ...state,
+        agents: action.payload
       }
     default:
       return state
