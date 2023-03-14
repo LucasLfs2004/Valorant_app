@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { changeTitle, changeAgentSelected, setAgent, setAgents } from "../../../store/actions/functions";
+import seta from "../../../assets/img/setaBege.png";
 
 
 export const Navigation = (props) => {
@@ -10,19 +11,9 @@ export const Navigation = (props) => {
     props.changeAgentSelected(agentSelected + value)
   }
 
-
   return (
-    <div>
-      <button onClick={() => {
-        if (agentSelected < agents - 1) {
-          if (agent.uuid === "117ed9e3-49f3-6512-3ccf-0cada7e3823b") {
-            return alternateAgent(2)
-          } else alternateAgent(1)
-        }
-  
-      }
-      }>ADD</button>
-      <button onClick={() => {
+    <div id="button-navigation">
+      <button className="btn-navigation" onClick={() => {
         if (agentSelected > 0) {
           if (props.agent.uuid === "320b2a48-4d9b-a075-30f1-1f93a9b638fa") {
             return alternateAgent(-2)
@@ -30,7 +21,20 @@ export const Navigation = (props) => {
           alternateAgent(-1)
         }
       }
-      }>SUB</button>
+      }>
+        <img src={seta} alt="" />
+      </button>
+      <button className="btn-navigation invert" onClick={() => {
+        if (agentSelected < agents - 1) {
+          if (agent.uuid === "117ed9e3-49f3-6512-3ccf-0cada7e3823b") {
+            return alternateAgent(2)
+          } else alternateAgent(1)
+        }
+
+      }
+      }>
+        <img src={seta} alt="" />
+      </button>
     </div>
   )
 }
