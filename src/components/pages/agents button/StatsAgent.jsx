@@ -1,5 +1,6 @@
 import './StatsAgent.css'
 import React from "react";
+import { connect } from "react-redux";
 
 const StatsAgents = (props) => {
   const { agent } = props;
@@ -22,8 +23,8 @@ const StatsAgents = (props) => {
                     agent.characterTags &&
                     agent.characterTags.map(
                       (item, key) => (
-                        <ul key={`list-${key}`}>
-                          <li>{item}</li>
+                        <ul>
+                          <li key={key}>{item}</li>
                         </ul>
                       )
                     )
@@ -37,7 +38,7 @@ const StatsAgents = (props) => {
               agent.abilities &&
               agent.abilities.map(
                 (item, key) =>
-                (<div className='card-agent abilities' key={`card-abilities-${key}`}>
+                (<div className='card-agent abilities' key={key}>
                   <div className='title-agent'>
                     <img src={item.displayIcon} alt="" />
                     <h2>{item.displayName}</h2>
@@ -51,4 +52,10 @@ const StatsAgents = (props) => {
   )
 }
 
-export default StatsAgents;
+function mapStateToProps(state) {
+  return {
+    agent: state.title.agent,
+  };
+}
+
+export default connect (mapStateToProps)(StatsAgents);

@@ -5,12 +5,10 @@ import seta from "../../../assets/img/setaBege.png";
 
 
 export const Navigation = (props) => {
-  const {title, agentSelected, agent, agents } = props
+  const { agentSelected, agent, agents } = props
 
   function alternateAgent(value) {
     props.changeAgentSelected(agentSelected + value)
-    
-    console.log("Alternate agent")
   }
 
   return (

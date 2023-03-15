@@ -6,35 +6,46 @@ import { connect } from "react-redux";
 import Navigation from "./NavigationAgent";
 import ImageAgent from "./ImageAgent";
 import StatsAgent from "./StatsAgent";
-import Slider from "react-slick";
 
 const Agents = (props) => {
-  const { title, agentSelected, agent, agents } = props
+  const { agentSelected, agent, agents } = props
 
-
-
+  const [background, setBackground] = useState([]);
   useEffect(() => {
-    axios.get("https://valorant-api.com/v1/agents?language=pt-BR")
-      .then((resp) => {
-        props.setAgents(resp.data.data);
-        props.setAgent(resp.data.data[agentSelected]);
-        props.setAgents(resp.data.data.length);
-        props.changeTitle(resp.data.data[agentSelected - 1].displayName)
-        console.log("termino");
-        document.body.style.setProperty("--bg-agent-1", `#${resp.data.data[agentSelected].backgroundGradientColors[0]}`);
-        document.body.style.setProperty("--bg-agent-4", `#${resp.data.data[agentSelected].backgroundGradientColors[3]}`);
-      })
-  }, [agentSelected]);
+    getAgents();
+  }, [agent, agentSelected]);
+
+  const getAgents = async () => {
+    try {
+      const query = await axios.get(
+        "https://valorant-api.com/v1/agents?language=pt-BR"
+      );
+
+      if (query.status < 300) {
+        props.setAgent(query.data.data[props.agentSelected]);
+        props.setAgents(query.data.data.length);
+        props.changeTitle(agent.displayName);
+        setBackground(agent.backgroundGradientColors);
+        //console.log(background)
+        document.body.style.setProperty("--bg-agent-1", `#${background[0]}`);
+        document.body.style.setProperty("--bg-agent-2", `#${background[1]}`);
+        document.body.style.setProperty("--bg-agent-3", `#${background[2]}`);
+        document.body.style.setProperty("--bg-agent-4", `#${background[3]}`);
+        return;
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <div id='agent-id'>
       <Navigation />
       <section className='conteudo-agent'>
-        <ImageAgent agent={agent} />
-        <StatsAgent agent={agent} />
+        <ImageAgent />
+        <StatsAgent />
       </section>
     </div>
-
   );
 };
 

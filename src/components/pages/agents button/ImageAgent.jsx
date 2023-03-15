@@ -1,5 +1,6 @@
 import "./ImageAgent.css";
 import React from "react";
+import { connect } from "react-redux";
 
 const ImageAgent = (props) => {
   const { agent } = props;
@@ -18,4 +19,10 @@ const ImageAgent = (props) => {
   )
 }
 
-export default ImageAgent
+function mapStateToProps(state) {
+  return {
+    agent: state.title.agent,
+  };
+}
+
+export default connect(mapStateToProps)(ImageAgent)

@@ -2,7 +2,7 @@ import { NEW_TITLE, AGENT_SELECTED, AGENT, AGENTS } from "../actions/actionTypes
 
 const initialState = {
   title: "",
-  agentSelected: 0,
+  agentSelected: 10,
   agent: {},
   agents: 0
 }
