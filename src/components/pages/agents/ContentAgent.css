@@ -1,0 +1,196 @@
+#agent-content {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 125vh;
+}
+
+.poster {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.category-agent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.category-agent img {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.image-agent {
+  top: -50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full {
+  z-index: 2;
+  width: 900px !important;
+  margin-bottom: 50px;
+}
+
+.bg {
+  position: absolute;
+  width: 600px !important;
+}
+
+/* Infos */
+
+.infos {
+  position: absolute;
+  left: 900px;
+  display: flex;
+  width: 1100px;
+  flex-direction: column;
+}
+
+.description p {
+  color: var(--color-bege);
+  font-size: 1.2rem;
+  width: 920px;
+}
+
+.display-agent {
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-agent {
+  display: flex;
+  flex-direction: column;
+  filter: opacity(0.8);
+  width: 460px;
+  justify-content: center;
+  border: 2px ridge #CCC;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.card-agent-menor {
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  width: 460px;
+  filter: opacity(0.8);
+  justify-content: center;
+  border: 2px ridge #CCC;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+
+.card-agent p {
+  text-align: justify;
+  margin: 0px 10px 10px 10px;
+  font-size: 1.1rem;
+}
+
+.list {
+  text-align: justify;
+  margin: 0px 10px 10px 10px;
+  font-size: 1.1rem;
+}
+
+.title-agent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-agent img {
+  width: 3.6rem;
+  margin-right: 15px;
+}
+
+.description {
+  width: 1000px;
+  font-size: 1.4rem;
+  text-align: justify;
+  margin: 20px;
+}
+
+@media (max-width: 500px) {
+  #agent-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 335vh;
+  }
+
+  .poster {
+    position: static;
+  }
+
+  .category-agent {
+    font-size: 1rem;
+  }
+
+  .category-agent img {
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+  }
+
+  .image-agent {
+    top: 0;
+  }
+
+  .full {
+    width: 450px !important;
+  }
+
+  .bg {
+    width: 350px !important;
+  }
+
+  .infos {
+    position: static;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .description {
+    width: 350px;
+  }
+
+
+  .description p {
+    width: 350px;
+  }
+
+  .display-agent {
+    width: 350px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  .card-agent-menor {
+    width: 350px;
+    margin: 0;
+  }
+  
+  .card-agent {
+    width: 350px;
+    margin: 15px 0;
+  }
+}

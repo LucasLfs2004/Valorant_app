@@ -11,7 +11,6 @@ import Maps from '../pages/maps/Maps';
 import MapsSelected from '../pages/maps/MapSelected'
 import About from '../pages/About'
 import NotFound from '../pages/NotFound';
-import PageAgents from '../pages/agents/PageAgents';
 
 const Content = props => (
     <main className="Content">

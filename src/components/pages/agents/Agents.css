@@ -1,59 +1,41 @@
 :root {
-  --bg-agent-1: #000;
-  --bg-agent-2: #000;
-  --bg-agent-3: #000;
-  --bg-agent-4: #000;
+  --bg-agent-1: #fff;
+  --bg-agent-2: #fff;
+  --bg-agent-3: #fff;
+  --bg-agent-4: #fff;
   color: #FFF;
 }
 
 #agent-id {
-  background-image: linear-gradient(to right, var(--bg-agent-1), var(--bg-agent-4)) !important;
   font-size: 1.4rem;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-#agent-id h1 {
-  font-family: Valorant-font;
-  color: #BBB;
-  padding: 15px;
-  margin: 0;
-  padding: 0;
-}
-
-.conteudo-agent {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-}
-
-#button-navigation {
-  position: absolute;
-  z-index: 5;
-  display: flex;
   width: 100%;
-  justify-content: space-between;
-  flex-direction: row;
-  top: 350px;
+  height: 100%;
+  padding-bottom: 0px;
+  margin: 0;
 }
 
-.btn-navigation {
-  background: transparent;
-  border: none;
-  font-size: 6rem;
+.slick-dots {
+  position: absolute;
+  top: 0.1vh;
+  height: 0.1vh;
 }
 
-.btn-navigation img {
-  width: 64px;
-  height: 64px;
+.title-page {
+  font-family: Valorant-font;
+  color: var(--color-bege)
+    /*#BBB*/
+  ;
+  padding-top: 5vh;
 }
 
-.btn-navigation:hover {
-  cursor: pointer;
-}
+@media (max-width: 500px) {
+  #agent-id {
+    max-height: auto;
+  }
 
-.invert img {
-  rotate: 180deg;
+  .title-page {
+    padding-top: 10vh;
+    font-size: 1.6rem;
+  }
 }

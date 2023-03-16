@@ -35,16 +35,11 @@ body {
 #root,
 .App {
   max-width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   flex: 1;
-}
-
-.App {
   text-align: center;
-  display: flex;
-  flex-direction: column;
 }
 
 .Content {

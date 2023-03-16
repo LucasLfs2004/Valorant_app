@@ -9,9 +9,9 @@ props.changeTitle("");
 
     return (
         <div id="home">
-            <div className='poster'>
-                <img className='image' src="https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/fullportrait.png" alt="" />
-                <img className='background' src="https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/background.png" alt="" />
+            <div className='poster-home'>
+                <img className='image-home' src="https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/fullportrait.png" alt="" />
+                <img className='background-home' src="https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/background.png" alt="" />
             </div>
             <div className='apresentacao'>
                 <h1>
