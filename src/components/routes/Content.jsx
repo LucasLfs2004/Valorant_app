@@ -11,6 +11,7 @@ import Maps from '../pages/maps/Maps';
 import MapsSelected from '../pages/maps/MapSelected'
 import About from '../pages/About'
 import NotFound from '../pages/NotFound';
+import RiotPage from '../pages/Riot';
 
 const Content = props => (
     <main className="Content">
@@ -23,7 +24,8 @@ const Content = props => (
             <Route exact path="/maps" element={<Maps />} />
             <Route exact path="/maps/:uuid" element={<MapsSelected />} />
             <Route exact path="/about" element={<About />} />
-            <Route path='*' element={<NotFound />} />
+            <Route exact path="//riot.txt" element={<RiotPage />} />
+            <Route path='*' element={<RiotPage />} />
         </Routes>
     </main>
 )
