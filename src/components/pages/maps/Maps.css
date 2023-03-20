@@ -1,62 +1,126 @@
-.maps {
+#map-slider {
+    margin: 0;
+    height: 1080px;
+}
+
+.slick-list {
+    height: 1080px;
+}
+
+.map-id {
+    margin: 0;
+    max-width: 100%;
+    height: 100%;
+    position: relative;
+    filter: opacity(0.8);
+}
+
+.bg-map {
+    min-width: 100%;
+    max-width: 1920px;
+}
+
+.conteudo {
+    padding-top: 25px;
     width: 100%;
-    background: linear-gradient(0, var(--color-vinho), var(--color-cabernet));
-    padding-bottom: 100px;
-    font-family: Valorant-font;
-    padding-top: 30px;
-    color: var(--color-bege);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    z-index: 1;
 }
 
-.maps a {
-    text-decoration: none;
-    color: var(--color-vinho);
+.display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
 }
 
-.cards {
+.map-icon {
+    width: 650px !important;
+}
+
+.card-coordinates {
+    color: black;
+    width: 600px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
     flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid grey;
+    border-radius: 20px;
+    background-color: rgb(255, 251, 245, 0.3);
 }
 
-.card-map {
-    background-image: linear-gradient(0, var(--color-cabernet), var(--color-vinho));
-    color: var(--color-bege);
-    border: 1px solid var(--color-bege);
-    margin: 20px;
-    border-radius: 0 0px 20px 20px;
-}
+@media (max-width: 400px) {
+    .map-icon {
+        width: 350px !important;
+    }
 
-.card-map img {
-    width: 550px;
+    .card-coordinates {
+        width: 300px;
+        font-size:  1rem;
+    }
+    .bg-map {
+        width: auto;
+        height: 680px !important;
+        position: relative;
+        left: -400px;
+    }
 }
 
 @media (max-width: 500px) {
-    .maps {
-        padding: 0;
-        padding-bottom: 20px;
+    .map-icon {
+        width: 400px !important;
     }
 
-    .card-map {
-        margin: 20px 0 0 0;
+    .card-coordinates {
+        width: 350px;
+        font-size:  1rem;
     }
-
-    .card-map img {
-        width: 320px;
+    .bg-map {
+        width: auto;
+        height: 760px !important;
+        position: relative;
+        left: -400px;
     }
 }
 
-@media (max-width: 300px) {
-    .maps {
-        padding: 0;
-        padding-bottom: 20px;
+@media (max-width: 360px) {
+    .map-icon {
+        width: 330px !important;
     }
 
-    .card-map {
-        margin: 20px 0 0 0;
+    .card-coordinates {
+        width: 280px;
+        font-size:  1rem;
+    }
+    .bg-map {
+        width: auto;
+        height: 600px !important;
+        position: relative;
+        left: -400px;
+    }
+}
+
+@media (max-width: 280px) {
+    .map-icon {
+        width: 250px !important;
     }
 
-    .card-map img {
-        width: 260px;
+    .card-coordinates {
+        width: 200px;
+        font-size:  1rem;
+    }
+    .bg-map {
+        width: auto;
+        height: 510px !important;
+        position: relative;
+        left: -400px;
     }
 }

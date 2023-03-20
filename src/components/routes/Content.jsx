@@ -8,7 +8,6 @@ import Agents from '../pages/agents/Agents';
 import Weapon from '../pages/weapons/Weapons';
 import WeaponSelected from '../pages/weapons/WeaponSelected';
 import Maps from '../pages/maps/Maps';
-import MapsSelected from '../pages/maps/MapSelected'
 import About from '../pages/About'
 import NotFound from '../pages/NotFound';
 import RiotPage from '../pages/Riot';
@@ -22,7 +21,7 @@ const Content = props => (
             <Route exact path="/weapons" element={<Weapon />} />
             <Route exact path="/weapons/:uuid" element={<WeaponSelected />} />
             <Route exact path="/maps" element={<Maps />} />
-            <Route exact path="/maps/:uuid" element={<MapsSelected />} />
+            {/* <Route exact path="/maps/:uuid" element={<MapsSelected />} /> */}
             <Route exact path="/about" element={<About />} />
             <Route exact path="//riot.txt" element={<RiotPage />} />
             <Route path='*' element={<RiotPage />} />
