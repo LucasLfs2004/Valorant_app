@@ -5,7 +5,13 @@ import { connect } from "react-redux";
 import { changeTitle } from "../../../store/actions/functions";
 
 const WeaponSelected = (props) => {
-  const { title } = props;
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
 
   const uri = window.location.pathname.split("/").slice(2);
   const uuid = uri[0];
@@ -15,7 +21,8 @@ const WeaponSelected = (props) => {
   const [weapon, setWeapon] = useState([]);
   useEffect(() => {
     getWeaponId();
-  }, [weapon]);
+    console.log("Funcionando")
+  }, [changeTitle]);
 
   const getWeaponId = async () => {
     try {
@@ -24,7 +31,6 @@ const WeaponSelected = (props) => {
       );
       if (query.status < 300) {
         setWeapon(query.data.data);
-        //console.log(query.data.data)
       }
     } catch (err) {
       console.log(err);

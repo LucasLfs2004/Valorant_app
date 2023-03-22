@@ -14,7 +14,7 @@ const MapSelected = (props) => {
     const [map, setMap] = useState([]);
     useEffect(() => {
         getMap();
-    }, [map]
+    }, [changeTitle]
     );
 
     const getMap = async () => {

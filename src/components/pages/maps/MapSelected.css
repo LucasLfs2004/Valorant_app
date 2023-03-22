@@ -1,4 +1,5 @@
 .map-id {
+    padding: 0;
     margin: 0;
     max-width: 100%;
     height: 100%;
@@ -53,8 +54,9 @@
 
     .card-coordinates {
         width: 300px;
-        font-size:  1rem;
+        font-size: 1rem;
     }
+
     .bg-map {
         width: auto;
         height: 680px !important;
@@ -70,8 +72,9 @@
 
     .card-coordinates {
         width: 350px;
-        font-size:  1rem;
+        font-size: 1rem;
     }
+
     .bg-map {
         width: auto;
         height: 760px !important;
@@ -87,8 +90,9 @@
 
     .card-coordinates {
         width: 280px;
-        font-size:  1rem;
+        font-size: 1rem;
     }
+
     .bg-map {
         width: auto;
         height: 600px !important;
@@ -98,17 +102,19 @@
 }
 
 @media (max-width: 280px) {
+
     .map-icon {
         width: 250px !important;
     }
 
     .card-coordinates {
         width: 200px;
-        font-size:  1rem;
+        font-size: 1rem;
     }
+
     .bg-map {
         width: auto;
-        height: 510px !important;
+        height: 100%;
         position: relative;
         left: -400px;
     }

@@ -15,10 +15,6 @@ As alterações serão listadas a seguir:
 - Otimizar a aplicação;
 - garantir que as páginas não tenham rebarbas brancas em lugar algum;
 
-#### Página de Agentes
-- Realizar a retirada de Cards dessa página.
-- Realizar a construção de um carrossel, onde na seção de Operadores, venha um personagem selecionado, com todos os dados e características, com a opção de mudar de personagem por meio de setas.
-
 #### Página de armas
 - Estilizar os cards de uma forma mais atraente, ou realizar a esclusão da página de cards, fazendo assim um carrossel com uma única arma por vez, onde a cada clique na seta lateral, será trocada a arma;
 - Construir um background mais atraente, ou realizar a troca do background por um wallpaper que seja mais chamativo para a página;

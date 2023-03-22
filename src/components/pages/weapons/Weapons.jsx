@@ -11,7 +11,7 @@ const Weapons = (props) => {
     const [category, setCategory] = useState(null);
     useEffect(() => {
         getWeaponsCategory();
-    }, [category]
+    }, [changeTitle]
     );
 
     const getWeaponsCategory = async () => {
