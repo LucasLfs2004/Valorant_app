@@ -3,14 +3,23 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { connect } from "react-redux";
 import { changeTitle } from "../../../store/actions/functions";
+import Slider from "react-slick";
 
 const WeaponSelected = (props) => {
-  const settings = {
+  const settings1 = {
+    dots: true,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 10,
+    slidesToScroll: 10
+  };
+
+  const settings2 = {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToShow: 3,
+    slidesToScroll: 3
   };
 
   const uri = window.location.pathname.split("/").slice(2);
@@ -40,27 +49,55 @@ const WeaponSelected = (props) => {
   return (
     <div id="weapon-id">
       <div id="navbar-weapon-skins">
-        <h1>Skins</h1>
-        <button onClick={(e) => setSkin("standard")} className="btn-skins">
-          <p className="title-skin">Default</p>
-        </button>
-        {weapon?.skins &&
-          weapon.skins.map((item, key) => (
-            <div key={key}>
-              {item.displayName !== `${weapon.displayName} Padrão` &&
-              item.displayName !== "Skin Favorita Aleatória" ? (
-                <button
-                  key={key}
-                  onClick={(e) => setSkin(item.displayName)}
-                  className="btn-skins"
-                >
-                  <p className="title-skin">{item.displayName}</p>
-                </button>
-              ) : (
-                <div></div>
-              )}
-            </div>
-          ))}
+        <h1></h1>
+        <Slider className="slider-weapon-pc"  {...settings1}>
+          <div>
+            <button onClick={(e) => setSkin("standard")} className="btn-skins">
+              <p className="title-skin">Default</p>
+            </button>
+          </div>
+          {weapon?.skins &&
+            weapon.skins.map((item, key) => (
+              <div key={key}>
+                {item.displayName !== `${weapon.displayName} Padrão` &&
+                  item.displayName !== "Skin Favorita Aleatória" ? (
+                  <button
+                    key={key}
+                    onClick={(e) => setSkin(item.displayName)}
+                    className="btn-skins"
+                  >
+                    <p className="title-skin">{item.displayName}</p>
+                  </button>
+                ) : (
+                  <div></div>
+                )}
+              </div>
+            ))}
+        </Slider>
+        <Slider className="slider-weapon-mobile"  {...settings2}>
+          <div>
+            <button onClick={(e) => setSkin("standard")} className="btn-skins">
+              <p className="title-skin">Default</p>
+            </button>
+          </div>
+          {weapon?.skins &&
+            weapon.skins.map((item, key) => (
+              <div key={key}>
+                {item.displayName !== `${weapon.displayName} Padrão` &&
+                  item.displayName !== "Skin Favorita Aleatória" ? (
+                  <button
+                    key={key}
+                    onClick={(e) => setSkin(item.displayName)}
+                    className="btn-skins"
+                  >
+                    <p className="title-skin">{item.displayName}</p>
+                  </button>
+                ) : (
+                  <div></div>
+                )}
+              </div>
+            ))}
+        </Slider>
       </div>
       <div className="weapon-content">
         {skin === "standard"

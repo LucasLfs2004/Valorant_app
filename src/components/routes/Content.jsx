@@ -23,7 +23,7 @@ const Content = props => (
             <Route exact path="/weapons/:uuid" element={<WeaponSelected />} />
             <Route exact path="/maps" element={<Maps />} />
             <Route exact path="/maps/:uuid" element={<MapSelected />} />
-            <Route exact path="/about" element={<About />} />
+            {/* <Route exact path="/about" element={<About />} /> */}
             <Route exact path="//riot.txt" element={<RiotPage />} />
             <Route path='*' element={<RiotPage />} />
         </Routes>

@@ -14,6 +14,7 @@ const MapSelected = (props) => {
     const [map, setMap] = useState([]);
     useEffect(() => {
         getMap();
+        console.log(title)
     }, [changeTitle]
     );
 
@@ -23,7 +24,6 @@ const MapSelected = (props) => {
 
             if (query.status < 300) {
                 setMap(query.data.data);
-                props.changeTitle(map.displayName);
             }
         } catch (err) {
             console.log(err);

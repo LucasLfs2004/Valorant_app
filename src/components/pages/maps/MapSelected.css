@@ -8,7 +8,8 @@
 }
 
 .bg-map {
-    max-width: 1920px;
+    min-width: 100%;
+    max-width: 100%;
 }
 
 .conteudo {
@@ -58,10 +59,7 @@
     }
 
     .bg-map {
-        width: auto;
-        height: 680px !important;
-        position: relative;
-        left: -400px;
+        display: block;
     }
 }
 
@@ -76,10 +74,10 @@
     }
 
     .bg-map {
+        min-width: auto;
+        max-width: 500px;
         width: auto;
-        height: 760px !important;
-        position: relative;
-        left: -400px;
+        height: 100%;
     }
 }
 

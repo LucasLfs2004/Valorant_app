@@ -32,9 +32,9 @@ const Header = (props) => {
           <Link className='btn' to={"/maps"} onClick={() => props.changeTitle("Mapas")}>
             Mapas
           </Link>
-          <Link className='btn' to={"/about"} onClick={() => props.changeTitle("Sobre Nós")}>
+          {/* <Link className='btn' to={"/about"} onClick={() => props.changeTitle("Sobre Nós")}>
             Sobre
-          </Link>
+          </Link> */}
         </div>
       </div>
       <div className="content-bottom">

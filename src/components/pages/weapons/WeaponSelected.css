@@ -7,35 +7,43 @@
   height: 100%;
 }
 
+.slider-weapon-pc {
+  height: 100px;
+}
+
+.slider-weapon-mobile {
+  display: none;
+}
+
 #navbar-weapon-skins {
   position: relative;
-  bottom: 0;
-  left: 0;
+  padding-top: 20px;
   margin: 0;
-  width: 20%;
+  width: 100%;
   background-color: #111;
 }
 
 #navbar-weapon-skins h1 {
-  color: var(--color-cabernet);
+  color: #FFF;
   font-family: Valorant-font;
 }
 
 .btn-skins {
-  padding: 15px 0;
+  padding: 15px 0px;
   background-color: transparent;
   cursor: pointer;
+  height: 80px;
   width: 100%;
   border: none;
+  border-left: 3px solid #FFF;
   transition: all 1s ease;
 }
 
 .btn-skins:hover {
-  background-color: var(--color-cabernet);
+  filter: opacity(0.5);
 }
 
 .btn-skins:hover p {
-  color: var(--color-bege);
 }
 
 .title-skin {
@@ -56,7 +64,7 @@
 }
 
 .weapon-content {
-  width: 80%;
+  width: 100%;
   background-color: var(--color-bege);
   color: var(--color-cabernet);
 }
@@ -110,9 +118,27 @@ td {
 
 @media (max-width: 500px) {
   #navbar-weapon-skins {
-    width: 30%;
+    width: 100%;
   }
-  
+
+  .btn-skins {
+    height: 20px;
+    border: none;
+  }
+
+  .slider-weapon-mobile {
+    display: block;
+    height: 30px;
+  }
+
+  .slider-weapon-pc {
+    display: none;
+  }
+
+  #navbar-weapon-skins {
+    padding-top: 10px;
+  }
+
   #navbar-weapon-skins h1 {
     font-size: 1rem;
   }
@@ -122,11 +148,10 @@ td {
     font-size: 0.6rem;
   }
   .weapon-content {
-    width: 70%;
+    padding-top: 50px;
   }
   .btn-skins {
     padding: 5px 0;
-    border-top: 1px solid var(--color-cabernet);
   }
   
     .img-weapon {

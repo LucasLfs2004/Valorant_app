@@ -34,7 +34,7 @@ const Maps = (props) => {
             maps?.data?.length &&
             maps.data.map(
               (item, key) => (
-                <Link to={`/maps/${item.uuid}`} key={key} >
+                <Link to={`/maps/${item.uuid}`} key={key} onClick={e => props.changeTitle(item.displayName)}>
                   <div className='card-map'>
                     <img src={item.listViewIcon} alt="" />
                     <p>{item.displayName}</p>
