@@ -4,51 +4,47 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { changeTitle } from '../../../store/actions/functions';
+import { getMaps } from '../../../api/api';
 
-const Maps = (props) => {
-
+const Maps = props => {
   const [maps, setMaps] = useState([]);
   useEffect(() => {
-    getMaps();
-  }, [changeTitle]
-  );
+    loadMaps();
+  }, [changeTitle]);
 
-  const getMaps = async () => {
+  const loadMaps = async () => {
     try {
-      const query = await axios.get('https://valorant-api.com/v1/maps');
-
-      if (query.status < 300) {
-        setMaps(query.data);
-        props.changeTitle("Mapas");
-      }
+      const response = await getMaps();
+      setMaps(response);
+      console.log(response);
+      props.changeTitle('Mapas');
     } catch (err) {
       console.log(err);
     }
-  }
+  };
 
   return (
-    <div className="maps">
-      <div className="content">
+    <div className='maps'>
+      <div className='content'>
         <div className='cards'>
-          {
-            maps?.data?.length &&
-            maps.data.map(
-              (item, key) => (
-                <Link to={`/maps/${item.uuid}`} key={key} onClick={e => props.changeTitle(item.displayName)}>
-                  <div className='card-map'>
-                    <img src={item.listViewIcon} alt="" />
-                    <p>{item.displayName}</p>
-                  </div>
-                </Link>
-              )
-            )
-          }
+          {maps?.length &&
+            maps.map((item, key) => (
+              <Link
+                to={`/maps/${item.uuid}`}
+                key={key}
+                onClick={e => props.changeTitle(item.displayName)}
+              >
+                <div className='card-map'>
+                  <img src={item.listViewIcon} alt='' />
+                  <p>{item.displayName}</p>
+                </div>
+              </Link>
+            ))}
         </div>
       </div>
     </div>
-  )
-}
-
+  );
+};
 
 function mapStateToProps(state) {
   return {
@@ -66,8 +62,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Maps);
+export default connect(mapStateToProps, mapDispatchToProps)(Maps);

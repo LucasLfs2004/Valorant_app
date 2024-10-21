@@ -1,6 +1,4 @@
 import React from "react";
-import RiotTxt from "../../main/riot.txt"
-
 
 const RiotPage = () => {
   return (

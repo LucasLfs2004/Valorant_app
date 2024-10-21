@@ -3,11 +3,13 @@ import 'slick-carousel/slick/slick.css';
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { changeTitle, changeAgentSelected, setAgent, setAgents } from "../../../store/actions/functions";
-import { connect } from "react-redux";
+import { connect, useDispatch } from "react-redux";
 import ContentAgent from "./ContentAgent";
 import Slider from "react-slick";
+import { getAgents } from "../../../api/api";
 
 const Agents = (props) => {
+  const dispatch = useDispatch();
   const { title, agentSelected, agent, agents } = props
 
   const settings = {
@@ -18,19 +20,18 @@ const Agents = (props) => {
     slidesToScroll: 1
   };
 
+const loadAgents = async () => {
+  const agentsData = await getAgents();
+  console.log('agents vindo da api: ', agentsData)
+  dispatch(setAgents(agentsData))
+  // document.body.style.setProperty("--bg-agent-1", `#${agentsData[agentSelected].backgroundGradientColors[0]}`);
+  // document.body.style.setProperty("--bg-agent-4", `#${agentsData[agentSelected].backgroundGradientColors[3]}`);
+}
 
+useEffect(() => {
 
-  useEffect(() => {
-    axios.get("https://valorant-api.com/v1/agents?language=pt-BR")
-      .then((resp) => {
-        props.setAgents(resp.data.data);
-        //props.setAgent(resp.data.data[agentSelected]);
-        //props.setAgents(resp.data.data.length);
-        props.changeTitle("Operadores")
-        console.log("termino");
-        document.body.style.setProperty("--bg-agent-1", `#${resp.data.data[agentSelected].backgroundGradientColors[0]}`);
-        document.body.style.setProperty("--bg-agent-4", `#${resp.data.data[agentSelected].backgroundGradientColors[3]}`);
-      })
+    dispatch(changeTitle("Operadores"))
+    loadAgents()
   }, [agentSelected]);
 
   return (

@@ -2,18 +2,22 @@
 
 @font-face {
   font-family: Valorant-font;
-  src: url('../assets/fonts/Valorant\ Font.ttf');
+  src: url('../../public/assets/fonts/Valorant\ Font.ttf');
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4,
+p {
   margin: 0;
 }
 
 :root {
   font-family: 'Josefin Sans', sans-serif;
-  --color-bege: #FFFBF5;
-  --color-vinho: #53212B;
-  --color-vinho-claro: #BD3944;
+  --color-bege: #fffbf5;
+  --color-vinho: #53212b;
+  --color-vinho-claro: #bd3944;
   --color-cabernet: #fd4556;
   --color-preto: #000;
   --color-1: #90e3fdff;
@@ -55,7 +59,7 @@ a {
   padding: 0;
 }
 
-@media (max-width:500px) {
+@media (max-width: 500px) {
   body {
     max-width: 450px;
     width: 100%;

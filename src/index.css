@@ -1,6 +1,6 @@
 @font-face {
   font-family: Valorant-font;
-  src: url('./assets/fonts/Valorant\ Font.ttf');
+  src: url('../public/assets/fonts/Valorant\ Font.ttf');
 }
 
 body {
